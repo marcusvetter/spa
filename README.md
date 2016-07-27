@@ -1,56 +1,56 @@
-# Startpunkte / Vorlagen
+# Templates
 http://github.com/marcusvetter/yoda-chat
 http://github.com/christianeder/angular2-webpack-aspnetcore
 
-# Packagemanagement
-- **npm** (reicht unserer Meinung nach vollkommen aus)
-- Alternativ/Ergänzend:
+# Package Management
+- **npm**
+- Optional/Additional:
     - bower
     - jspm
 
 # Build
 - **Webpack**
-    - Vereinfacht Tasks, die man in der SPA-Entwicklung oft benötigt (z.B. Kompilieren von TypeScript)
-    - Schaut auf Änderungen im Code und lädt Anwendung automatisch neu
-    - Tasks könnten auch mit Gulp/Grunt erstellt werden, ist aber aufwändiger
-- Alternativ:
-    - Gulp (moderner als Grunt, funktionsbasiert)
-    - Grunt (konfigurationsbasiert)
+    - Simplifies tasks (e.g. compilation of TypeScript files)
+    - Watches for code changes and refreshes the application automatically
+    - Tasks may created with Gulp/Grunt (high effort)
+- Alternative:
+    - Gulp (function-based)
+    - Grunt (configuration-based)
 
-# Entwicklungssprachen
-- Skriptsprachen
-    - **TypeScript** (Vorteile gegenüber JavaScript: Typsicherheit, dadurch Refactorings, erzwingt mehr Clean Code, enthält ES6 und ES7 Features)
+# Development languages
+- Scripting languages
+    - **TypeScript** (Type safety, includes ES6 and ES7 language features)
     - JavaScript
 - Markup
-    - HTML
-    - Jade (je nach Geschack, spart einige Klammern, bei komponentenbasiertem Framework wie z.B. Angular2 teilw. überflüssige Features)
+    - **HTML**
+    - Jade (if you like a templating engine)
 - Styling
-    - CSS (bei Verwendung von Angular2 und klein geschnittenen Komponenten ausreichend abgesehen von nicht unterstützen Variablen)
-    - SASS vs LESS je nach Geschmack
-    - Webpack macht Verwendung extrem einfach - sogar für einzelne Komponenten
-    - **Wiederverwendbare Styles (Mixins, Variablen)** vs gestylte Komponenten / Layout-Komponenten
+    - CSS (does not support variables)
+    - SASS/LESS
+    - **Reusable styles (Mixins, Variablen)** vs Styled Components / Layout-Components
 
-# Frameworks für Web-Anwendung (SPA)
-- Angular1 (Sehr etabliertes Framework, große Community, ggf. Performanzeinschränkungen bei sehr großen Daten)
-- Angular2 (Framework, Momentan noch RC4, leider bisher häufig Breaking Changes)
-- Aurelia (Framework, scheint vielversprechend zu sein, leider bisher noch keine praktische Erfahrung)
-- ReactJS (Library, kein Framework. Leider bisher noch keine praktische Erfahrung)
+# Frameworks/Libraries for SPA development
+- Angular1: Grown, reliable Framework, huge Community, may have restrictions regarding performance with big data
+- Angular2: Framework (currently RC4), huge amount of Breaking Changes (until RC4)
+- Aurelia: Framework
+- ReactJS: Library, not a Framework.
 
-# Frameworks für Unit-Test
+# Frameworks for Unit Tests
 - Runner-Framework
-    - **Karma** (de-facto Standard)
+    - **Karma**
     - Chutzpah
     - Mocha
 - Assertion-Framework
     - **Jasmine**
-    - Chai / ChaiAsPromised / Sinon (alternativ, oder z.B. für Akzeptanztests)
+    - Chai / ChaiAsPromised / Sinon (alternative, or e.g. for acceptance testing)
 
-# Frameworks für Akzeptanztests
-- **Protractor** (empfohlen von Angular/Aurelia)
-- WebdriverJS (Protractor erweitert WebdriveJS-API)
-- **Cucumber** (Akzeptanzgetriebenes Testen)
+# Frameworks for Acceptance Tests
+- **Protractor** (recommended by Angular/Aurelia)
+- WebdriverJS (Protractor extends WebdriveJS-API)
+- **Cucumber** (Acceptance Driven Testen)
 
-# Allgemein
-- Keine internal Modules verwenden! => Läuft nur mit Webpack/Browserify/... im Browser (da historisch konzipiert für Node)
-- Clean Code bei SPAs extrem wichtig :-)
-- Komponentenbasiert entwicklen! (Eine Komponente besteht aus Businesslogik, DOM, Styles, Assets, Tests)
+# Gerenal
+- Do not use internal JavaScript modules
+- Use external JavaScript modules and run it with Webpack/Browserify/...
+- Clean Code is very important!
+- Component-oriented development is important! (A component consists of business logic, DOM, Styles, Assets, Tests)
